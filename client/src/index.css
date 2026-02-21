@@ -1,0 +1,67 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: 0.3rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 0.8rem;
+  --radius-xl: 1rem;
+
+  /* Earthy Warm Palette inspired by Sudanese Spices and Nile */
+  --color-background: hsl(30 20% 98%); /* Warm Papyrus White */
+  --color-foreground: hsl(20 10% 15%); /* Dark Coffee */
+  
+  --color-card: hsl(0 0% 100%);
+  --color-card-foreground: hsl(20 10% 15%);
+  
+  --color-popover: hsl(0 0% 100%);
+  --color-popover-foreground: hsl(20 10% 15%);
+  
+  --color-primary: hsl(25 85% 45%); /* Spiced Rust / Terracotta */
+  --color-primary-foreground: hsl(30 20% 98%);
+  
+  --color-secondary: hsl(180 35% 30%); /* Deep Nile Teal */
+  --color-secondary-foreground: hsl(180 20% 95%);
+  
+  --color-muted: hsl(30 15% 90%);
+  --color-muted-foreground: hsl(25 5% 45%);
+  
+  --color-accent: hsl(40 60% 90%); /* Light Gold/Sand */
+  --color-accent-foreground: hsl(25 85% 45%);
+  
+  --color-destructive: hsl(0 70% 50%);
+  --color-destructive-foreground: hsl(0 0% 100%);
+  
+  --color-border: hsl(30 10% 85%);
+  --color-input: hsl(30 10% 85%);
+  --color-ring: hsl(25 85% 45%);
+  
+  --color-chart-1: hsl(25 85% 45%);
+  --color-chart-2: hsl(180 35% 30%);
+  --color-chart-3: hsl(45 90% 45%);
+  --color-chart-4: hsl(15 70% 55%);
+  --color-chart-5: hsl(200 60% 40%);
+
+  --font-sans: 'Tajawal', 'Outfit', sans-serif;
+  
+  --radius: 0.5rem;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    background-image: url('/images/texture-pattern.png');
+    background-blend-mode: multiply;
+    background-size: 400px;
+    background-attachment: fixed;
+  }
+}
+
+.rtl-grid {
+  direction: rtl;
+}
